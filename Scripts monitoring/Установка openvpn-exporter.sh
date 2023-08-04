@@ -12,7 +12,6 @@ tar xzf v0.3.0.tar.gz
 sudo cd openvpn_exporter-0.3.0/
 
 sudo nano main.og
-...
 func main() {
         var (
                 listenAddress      = flag.String("web.listen-address", ":9176", "Address to listen on for web interface and telemetry.")
