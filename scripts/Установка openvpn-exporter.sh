@@ -51,6 +51,24 @@ sudo systemctl status openvpn_exporter
 
 
 
+	ret=$(ps aux | grep openvpn_exporter | wc -l)
+	if [ "$ret" -eq 0 ]
+then {
+	echo "Running OpenVpn Exporter" #output text
+        sleep 1  #delay
+	sudo systemctl status openvpn_exporter #command for run program
+	exit 1
+}
+else 
+{
+	echo "Openvpn_exporter already running!"
+	exit 1
+}
+fi;
+
+
+
+
 
 
 
